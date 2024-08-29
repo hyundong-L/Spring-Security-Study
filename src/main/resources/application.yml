@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: security_study
+
+  profiles:
+    include: auth, prod
