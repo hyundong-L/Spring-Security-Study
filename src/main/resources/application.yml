@@ -18,7 +18,7 @@ spring:
 
 jwt:
   expiration:
-    access: {jwt.expiration.access}  # 1000 * 60 * 120 = 2 hour
-    refresh: {jwt.expiration.refresh} # 1000 * 60 * 120 = 2 weeks
+    access: ${jwt.expiration.access}  # 1000 * 60 * 120 = 2 hour
+    refresh: ${jwt.expiration.refresh} # 1000 * 60 * 120 = 2 weeks
 
-  secret: {jwt.secret}
+  secret: ${jwt.secret}
