@@ -3,4 +3,41 @@ spring:
     name: security_study
 
   profiles:
-    include: auth, prod
+    include: auth
+    active: prod
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  cloud:
+    aws:
+      s3:
+        bucket: ${spring.cloud.aws.s3.bucket}
+      credentials:
+        accessKey: ${spring.cloud.aws.credentials.accessKey}
+        secretKey: ${spring.cloud.aws.credentials.secretKey}
+      region:
+        static: ${spring.cloud.aws.region.static}
+      stack:
+        auto: ${spring.cloud.aws.stack.auto}
+
+  # 이미지 용량 제한
+  servlet:
+    multipart:
+      maxFileSize: 10MB
+      maxRequestSize: 60MB
+
+jwt:
+  expiration:
+    access: ${jwt.expiration.access}
+    refresh: ${jwt.expiration.refresh}
+
+  secret: ${jwt.secret}

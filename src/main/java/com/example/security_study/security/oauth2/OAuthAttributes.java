@@ -1,6 +1,8 @@
 package com.example.security_study.security.oauth2;
 
 import com.example.security_study.domain.SocialType;
+import com.example.security_study.security.oauth2.userInfo.GoogleOAuth2UserInfo;
+import com.example.security_study.security.oauth2.userInfo.KakaoOAuth2UserInfo;
 import com.example.security_study.security.oauth2.userInfo.NaverOAuth2UserInfo;
 import com.example.security_study.security.oauth2.userInfo.OAuth2UserInfo;
 import lombok.Builder;
@@ -42,14 +44,14 @@ public class OAuthAttributes {
     private static OAuthAttributes ofGoogle(String nameAttributeKey, Map<String, Object> attributes) {
         return OAuthAttributes.builder()
                 .nameAttributeKey(nameAttributeKey)
-                .oAuth2UserInfo(new NaverOAuth2UserInfo(attributes))
+                .oAuth2UserInfo(new GoogleOAuth2UserInfo(attributes))
                 .build();
     }
 
     private static OAuthAttributes ofKakao(String nameAttributeKey, Map<String, Object> attributes) {
         return OAuthAttributes.builder()
                 .nameAttributeKey(nameAttributeKey)
-                .oAuth2UserInfo(new NaverOAuth2UserInfo(attributes))
+                .oAuth2UserInfo(new KakaoOAuth2UserInfo(attributes))
                 .build();
     }
 }
