@@ -16,4 +16,4 @@ BE Spring Repo - 브랜치에 따라 다른 방식 구현
 
 * <strong>oauth2/access+refresh-v2</strong> <br/>
   oauth2 소셜 로그인 + JWT(access + refresh) <br/>
-  리소스 서버로부터 인가코드를 받아 access 토큰을 요청하는 부분부터 구현
+  인가코드로 리소스 서버에게 access 토큰을 요청하는 부분부터 구현
