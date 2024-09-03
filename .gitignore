@@ -5,6 +5,9 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+# prod 숨김 처리
+src/**/application-prod.yml
+
 ### STS ###
 .apt_generated
 .classpath

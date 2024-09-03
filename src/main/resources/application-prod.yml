@@ -4,15 +4,3 @@ jwt:
     refresh: 12096000000 # 1000 * 60 * 120 = 2 weeks
 
   secret: aGVsbG9JJ21zdHVkeWluZ25vd3NwcmluZ1NlY3VyaXR5ISFJdCdzVmVyeUhhcmRCdXRJQ2FuRE9pVDs7ZnVja2luZ3NwcmluZ3NlY3VyaXR5YnV0SUxpa2VJdA
-
-spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
-
-  h2:
-    console:
-      enabled: true
-
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
